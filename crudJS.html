@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations Using JS</title>
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap/fonts/bootstrap-icons.woff">
+    <link rel="stylesheet" href="bootstrap/fonts/bootstrap-icons.woff2">
+</head>
+<body>
+    
+    <div class="container my-5">
+        <div id="formSection" class="my-5 p-3 border rounded">
+            <form id="form1" class="needs-validation" novalidate>
+                <div class="row">
+                    <input type="hidden" name="usrId" id="usrId" >
+                    <div class="col-md-4 mb-3">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control form-control-sm" name="fullName" id="fullName" required>
+                        <div class="invalid-feedback">
+                            Please enter full name.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="usrName">User Name</label>
+                        <input type="text" class="form-control form-control-sm" name="usrName" id="usrName" required>
+                        <div class="invalid-feedback">
+                            Please enter full name.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control form-control-sm" name="password" id="password" required>
+                        <div class="invalid-feedback">
+                            Please enter full name.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control form-control-sm" name="firstName" id="firstName" required>
+                        <div class="invalid-feedback">
+                            Please enter full name.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control form-control-sm" name="lastName" id="lastName" required>
+                        <div class="invalid-feedback">
+                            Please enter full name.
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-3 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-sm btn-outline-primary mx-3" id="insertBtn" onclick="insertData()"><i class="bi bi-plus-circle-fill me-2"></i>Create</button>
+                        <button type="submit" class="btn btn-sm btn-outline-primary mx-3 d-none" id="updateBtn" onclick="updateData()"><i class="bi bi-journal-check me-2"></i>Update</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary mx-3" onclick="resetForm()"><i class="bi bi-x-circle-fill me-2"></i>Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="gridSection" class="table-responsive border rounded p-3 my-5">
+            <table class="table table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">UserName</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
