@@ -106,7 +106,6 @@ function updateData() {
 }
 
 let deleteData = (index) => {
-  alert(index);
   data.splice(index, 1);
   localStorage.setItem("data", JSON.stringify(data));
   console.log(data);
